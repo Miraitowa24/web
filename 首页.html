@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏鉴赏</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="../js/图标.ico" type="imge/x-icon" />
+</head>
+
+<body>
+    <div class="container clearfix">
+        <!-- 导航 -->
+        <div class="navbar">
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">游戏分类</a>
+                        <ol>
+                            <li><a href="#">单机游戏</a></li>
+                            <li><a href="#">网络游戏</a></li>
+                            <li><a href="#">手机游戏</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">热门游戏</a>
+                        <ol>
+                            <li><a href="../js/老头环.html">艾尔登法环</a></li>
+                            <li><a href="../js/大表哥.html">荒野大镖客：救赎2</a></li>
+                            <li><a href="../js/起源.html">刺客信条：起源</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="../js/注册登录页.html">注册/登录</a>
+                    </li>
+                    <!-- 这个元素定义滑动的线条 -->
+                    <li class="underline"></li>
+                </ul>
+            </div>
+        </div>
+            </br>
+        <!-- 轮播图 -->
+        <div class="carousel">
+            <ul class="imglist">
+                <li><img src="../img/老头环轮播图.jpg" alt="" /></li>
+                <li><img src="../img/大表哥轮播图.jpg" alt="" /></li>
+                <li><img src="../img/刺客信条轮播图.jpg" alt="" /></li>
+                <li><img src="../img/老头环轮播图.jpg" alt="" /></li><!-- 使轮播连续无空白 -->
+            </ul>
+            <!-- 切换按钮 -->
+            <div class="prev">&lt;</div><!-- 将 < 替换为 &lt;，这是 < 的 HTML 实体编码。这样做不仅可以避免语法高亮的问题，还能确保 HTML 在浏览器中正确解析。 -->
+            <div class="next">></div>
+            <!-- 轮播图小圆点 -->
+            <ul class="icolist">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        </br>
+        <!-- 游戏简介 -->
+        <div class="content1 clearfix">
+            <div class="left">
+                <img src="../img/老头环封面.jpg" />
+            </div>
+            <div class="right">
+                <h1>艾尔登法环</h1>
+                <h2>Elden Ring</h2>
+                </br>
+                <p class="right1">
+                    《艾尔登法环》是一款以正统黑暗奇幻世界为舞台的动作RPG游戏。走进辽阔的场景与地下迷宫探索未知，挑战困难重重的险境，享受克服困境时的成就感吧。不仅如此，登场角色之间的利害关系谱成的群像剧，更是不容错过。
+                </p>
+                <a class=right2 href="../js/老头环.html">详情></a>
+            </div>
+        </div>
+        </br>
+        <div class="content2 clearfix">
+            <div class="left">
+                <img src="../img/大表哥封面.jpg" />
+            </div>
+            <div class="right">
+                <h1>荒野大镖客：救赎2</h1>
+                <h2>Red Dead Redemption 2</h2>
+                </br>
+                <p class="right1">
+                    《荒野大镖客：救赎2》是一款由《GTA5》、《荒野大镖客：救赎》团队打造开发的第三人称射击游戏。本次游戏的故事地点仍将是美国无情的蛮荒地区，R星创始人Sam Houser表示制作团队倾尽全力为玩家去打造一个“真实的、栩栩如生的”世界，而且本作将会给大家带来全新的线上模式体验。
+                </p>
+                <a class=right2 href="../js/大表哥.html">详情></a>
+            </div>
+        </div>
+        </br>
+        <div class="content3 clearfix">
+            <div class="left">
+                <img src="../img/起源封面.jpg" />
+            </div>
+            <div class="right">
+                <h1>刺客信条：起源</h1>
+                <h2>Assassin's Creed: Origins</h2>
+                </br>
+                <p class="right1">
+                    《刺客信条：起源》是由育碧制作并发行的《刺客信条》系列历史上规模最大的一个。本作采用开放地图沙盒玩法，主地图为埃及，聚焦刺客兄弟会的起源，主角为两个人，一男一女。本作自由度很高，相较系列前作更注重探索，并且还采用了非线性架构，设计了角色成长系统，而且和剧情联系度不深，有兴趣的玩家可以来尝试一下。
+                </p>
+                <a class=right2 href="../js/起源.html">详情></a>
+            </div>
+        </div>
+        </br>
+            <!-- 结尾 -->
+        <div class="footer">
+            <p>
+                Copyright © 2024 Miraitowa, All rights reserved.<br />版权所有 Miraitowa ICP备案号666666
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // 轮播图
+        var imgList = document.querySelector('.imglist'); // 获取图片列表的父元素
+        var eprev = document.querySelector('.prev')//获取按钮元素
+        var enext = document.querySelector('.next')
+        var esico = document.querySelectorAll('.icolist li'); // 获取小圆点元素列表
+        var eimglist = document.querySelector('.imglist');//获取图片列表元素
+        var left = 0; // 初始移动变量
+        var timer; // 定时器变量
+
+        // 设置定时器，每3秒执行一次移动函数
+        timer = setInterval(run, 3000);
+
+        function run() {
+            left -= 980; // 每次移动一个图片的宽度
+            imgchange(left); // 调用图片变换函数
+            // 当移动到最后一张图片时，返回到第一张图片
+            if (left <= -2940) {
+                left = 0;
+                imgchange(left);
+            }
+            var m = Math.floor(-left / 980);//创建变量m获取当前图片序号
+            icochange(m);//调用icochange进行小圆点变化
+        }
+        // 图片定位函数
+        function imgchange(lt) {
+            imgList.style.transition = 'margin-left 1s ease'; // 添加过渡效果
+            imgList.style.marginLeft = lt + 'px'; // 设置图片列表的左边距，实现移动
+            left = lt;// 更新 left 变量
+            clearInterval(timer); // 清除定时器
+            timer = setInterval(run, 3000); // 重新启动定时器
+        }
+        eprev.onclick = function () {
+            let prevgo = Math.floor(-left / 980) - 1;/* 获取当前位置，减去一，就是上一张 */
+            if (prevgo < 0) {
+                prevgo = 2;/* 因为第一张没有上一张，所以往前回到最后一张 */
+            }
+            imgchange(prevgo * -980);// 调用图片变换函数
+        }
+        enext.onclick = function () {
+            let nextgo = Math.floor(-left / 980) + 1;
+            if (nextgo > 2) {
+                nextgo = 0;
+            }
+            imgchange(nextgo * -980);
+        }
+        // 圆点跟随变化函数
+        function icochange(m) {
+            for (let index = 0; index < esico.length; index++) {
+                esico[index].style.backgroundColor = '';//通过for循环将所有li元素背景清空
+            }
+            if (m < esico.length) {
+                esico[m].style.backgroundColor = 'red';//将当前图片所在小圆点设置背景色为红色
+            }
+        }
+        // 小圆点点击切换
+        for (let index = 0; index < esico.length; index++) {
+            esico[index].onclick = function () {
+                imgchange(index * -980); // 点击后切换图片
+                icochange(index); // 切换小圆点颜色
+            };
+        }
+
+        // 鼠标悬停在图片上时停止轮播
+        eimglist.onmouseover = function () {
+            clearInterval(timer);
+        };
+
+        // 鼠标移开图片时恢复轮播
+        eimglist.onmouseout = function () {
+            timer = setInterval(run, 3000);
+        };
+    </script>
+</body>
+
+</html>
